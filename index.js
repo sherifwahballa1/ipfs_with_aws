@@ -27,16 +27,16 @@ app.use(xxs());
 // set port
 app.set("port", PORT);
 
-app.use(express.static(`${__dirname }/views/admin-dashboard`));
+app.use(express.static(`${__dirname }/views/dist`));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve('./views/admin-dashboard/index.html'));
+  res.sendFile(path.resolve('./views/dist/index.html'));
 });
 
 // redirect client
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve('./views/admin-dashboard/index.html'));
+  res.sendFile(path.resolve('./views/dist/index.html'));
 });
 
 const server = require("http").createServer(app);
