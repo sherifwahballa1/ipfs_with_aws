@@ -5,7 +5,7 @@ const path = require("path");
 const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
-const bodyParser = require(" ");
+const bodyParser = require("body-parser");
 const xxs = require('xss-clean');
 
 
